@@ -10,7 +10,6 @@ import Foundation
 import Combine
 
 struct API {
-  /// API Errors
   enum Error: LocalizedError {
     case addressUnreachable(URL)
     case invalidResponse
@@ -23,7 +22,6 @@ struct API {
     }
   }
   
-  /// API EndPoints
   enum EndPoint {
     static let baseURL = URL(string: "https://hacker-news.firebaseio.com/v0/")!
     
@@ -43,8 +41,54 @@ struct API {
   var storyLimit = 10
   
   private let decoder = JSONDecoder()
-  
   private let queue = DispatchQueue(label: "com.jrudygomez.HackerNews-Swift-Combine.API")
 
-  // TODO: Add methods for fetching a story and latest stories
+  func story(id: Int) -> AnyPublisher<Story, Error> {
+    URLSession.shared
+      .dataTaskPublisher(for: EndPoint.story(id).url)
+      .receive(on: queue)
+      .map(\.data)
+      .decode(type: Story.self, decoder: decoder)
+      .catch { _ in Empty<Story, Error>() }
+      .eraseToAnyPublisher()
+  }
+  
+  func mergedStories(ids: [Int]) -> AnyPublisher<Story, Error> {
+    let storyIDs = Array(ids.prefix(storyLimit))
+    
+    precondition(!ids.isEmpty)
+    
+    let initialPublisher = story(id: storyIDs[0])
+    let remainder = Array(storyIDs.dropFirst())
+    
+    return remainder.reduce(initialPublisher) { combined, id in
+      return combined
+        .merge(with: story(id: id))
+      .eraseToAnyPublisher()
+    }
+  }
+  
+  func latestStories() -> AnyPublisher<[Story], Error> {
+    URLSession.shared
+      .dataTaskPublisher(for: EndPoint.stories.url)
+      .map(\.data)
+      .decode(type: [Int].self, decoder: decoder)
+      .mapError { error -> API.Error in
+        switch error {
+        case is URLError:
+          return Error.addressUnreachable(EndPoint.stories.url)
+        default:
+          return Error.invalidResponse
+        }
+      }
+      .filter { !$0.isEmpty }
+      .flatMap { storyIDs in
+        self.mergedStories(ids: storyIDs)
+      }
+      .scan([]) { stories, story -> [Story] in
+        return stories + [story]
+      }
+      .map { $0.sorted() }
+      .eraseToAnyPublisher()
+  }
 }
