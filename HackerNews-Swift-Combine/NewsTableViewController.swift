@@ -15,11 +15,9 @@ class NewsTableViewController: UITableViewController {
   
   var subscriptions = Set<AnyCancellable>()
   
-  var newsStories = [Story]() {
+  private(set) var newsStories = [Story]() {
     didSet {
-      DispatchQueue.main.async { [weak self] in
-        self?.tableView.reloadData()
-      }
+      self.tableView.reloadData()
     }
   }
 
@@ -27,6 +25,7 @@ class NewsTableViewController: UITableViewController {
     super.viewDidLoad()
     
     newsApi.latestStories()
+      .receive(on: DispatchQueue.main)
       .sink(receiveCompletion: { print($0) }, receiveValue: {
         self.newsStories = $0
       })
