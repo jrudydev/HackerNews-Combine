@@ -14,9 +14,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="PWO-kx-Lee">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFH-JW-uB0">
+                                    <rect key="frame" x="8" y="18" width="398" height="19"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="Showing all stories">
+                                            <attributes>
+                                                <font key="NSFont" size="17" name="Arial-BoldMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailingMargin" secondItem="CFH-JW-uB0" secondAttribute="trailing" id="EfT-JD-sXG"/>
+                                <constraint firstItem="CFH-JW-uB0" firstAttribute="leading" secondItem="PWO-kx-Lee" secondAttribute="leadingMargin" id="dd8-eq-Iu3"/>
+                                <constraint firstItem="CFH-JW-uB0" firstAttribute="centerY" secondItem="PWO-kx-Lee" secondAttribute="centerY" id="z8u-mb-9Yz"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newscell" textLabel="ihu-V9-Nfi" detailTextLabel="wGs-4s-bAy" style="IBUITableViewCellStyleSubtitle" id="L41-l9-vyo">
-                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <rect key="frame" x="0.0" y="83" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L41-l9-vyo" id="Eh2-zH-Wgu">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
