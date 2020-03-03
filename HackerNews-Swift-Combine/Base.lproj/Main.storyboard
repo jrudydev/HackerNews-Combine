@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rah-rz-HNU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0hz-qE-Mvi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -9,7 +9,7 @@
         <!--Latest Stories-->
         <scene sceneID="JSd-bO-FtR">
             <objects>
-                <tableViewController title="Latest Stories" id="rah-rz-HNU" customClass="NewsTableViewController" customModule="HackerNews_Swift_Combine" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="rah-rz-HNU" customClass="NewsTableViewController" customModule="HackerNews_Swift_Combine" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MVW-if-J7N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,13 +69,32 @@
                             <outlet property="delegate" destination="rah-rz-HNU" id="yQg-3a-uVg"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Latest Stories" id="xkA-vs-hdc"/>
                     <connections>
                         <outlet property="showingLabel" destination="CFH-JW-uB0" id="gL0-cM-vcu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="REN-CP-tQj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136" y="84"/>
+            <point key="canvasLocation" x="1044.9275362318842" y="83.705357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7ca-es-SC9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0hz-qE-Mvi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="x4p-nU-Fk0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rah-rz-HNU" kind="relationship" relationship="rootViewController" id="BMb-4S-mkx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ipT-BN-PJU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="83.705357142857139"/>
         </scene>
     </scenes>
 </document>
