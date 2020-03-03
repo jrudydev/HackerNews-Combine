@@ -11,6 +11,8 @@ import Combine
 
 class NewsTableViewController: UITableViewController {
   
+  @IBOutlet weak var showingLabel: UILabel!
+  
   let newsApi = API()
   
   var subscriptions = Set<AnyCancellable>()
