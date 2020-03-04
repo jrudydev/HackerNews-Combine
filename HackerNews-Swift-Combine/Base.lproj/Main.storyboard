@@ -63,6 +63,39 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="storycell" id="QKX-KU-Ih6">
+                                <rect key="frame" x="0.0" y="138.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QKX-KU-Ih6" id="xD7-hA-cyz">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k1q-F0-Tfr">
+                                            <rect key="frame" x="50" y="10" width="50" height="25"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:30 PM" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNK-So-uuS">
+                                                    <rect key="frame" x="3" y="6.5" width="44" height="12"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="10"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="LNK-So-uuS" firstAttribute="leading" secondItem="k1q-F0-Tfr" secondAttribute="leading" constant="3" id="0KR-pb-74Q"/>
+                                                <constraint firstAttribute="height" constant="25" id="IrO-3q-wqz"/>
+                                                <constraint firstAttribute="width" constant="50" id="iuQ-le-H7d"/>
+                                                <constraint firstItem="LNK-So-uuS" firstAttribute="centerX" secondItem="k1q-F0-Tfr" secondAttribute="centerX" id="ncX-Bs-H3p"/>
+                                                <constraint firstItem="LNK-So-uuS" firstAttribute="centerY" secondItem="k1q-F0-Tfr" secondAttribute="centerY" id="oTO-Qf-vkN"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="k1q-F0-Tfr" firstAttribute="top" secondItem="xD7-hA-cyz" secondAttribute="top" constant="10" id="fEM-CG-Ycg"/>
+                                        <constraint firstItem="k1q-F0-Tfr" firstAttribute="leading" secondItem="xD7-hA-cyz" secondAttribute="leading" constant="50" id="oF6-Ld-3LN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="rah-rz-HNU" id="Kub-dr-5LV"/>
