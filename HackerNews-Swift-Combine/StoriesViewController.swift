@@ -9,7 +9,7 @@
 import UIKit
 import Combine
 
-class NewsTableViewController: UITableViewController {
+class StoriesViewController: UITableViewController {
   
   @IBOutlet weak var showingLabel: UILabel!
   

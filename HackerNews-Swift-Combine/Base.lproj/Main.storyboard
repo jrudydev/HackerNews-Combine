@@ -9,7 +9,7 @@
         <!--Latest Stories-->
         <scene sceneID="JSd-bO-FtR">
             <objects>
-                <tableViewController id="rah-rz-HNU" customClass="NewsTableViewController" customModule="HackerNews_Swift_Combine" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="rah-rz-HNU" customClass="StoriesViewController" customModule="HackerNews_Swift_Combine" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MVW-if-J7N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
