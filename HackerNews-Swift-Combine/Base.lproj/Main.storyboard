@@ -63,7 +63,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="storycell" rowHeight="233" id="QKX-KU-Ih6">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="storycell" rowHeight="233" id="QKX-KU-Ih6" customClass="StoryTableViewCell" customModule="HackerNews_Swift_Combine" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="138.5" width="414" height="233"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QKX-KU-Ih6" id="xD7-hA-cyz">
@@ -91,7 +91,7 @@
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="10"/>
+                                                    <integer key="value" value="5"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
@@ -128,6 +128,12 @@
                                         <constraint firstItem="p1r-fK-4nM" firstAttribute="top" secondItem="LNK-So-uuS" secondAttribute="bottom" constant="10" id="rIP-u3-xjv"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="linkButton" destination="HfB-8z-8KX" id="S6x-6b-0qo"/>
+                                    <outlet property="subtitleLabel" destination="7Xu-U7-kKq" id="KXV-NW-XhX"/>
+                                    <outlet property="timeLabel" destination="LNK-So-uuS" id="cxZ-7c-uG5"/>
+                                    <outlet property="titleLabel" destination="p1r-fK-4nM" id="MNY-4A-KHX"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
