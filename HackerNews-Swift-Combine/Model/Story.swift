@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Story: Codable {
+struct Story: Codable, Hashable {
   let id: Int
   let title: String
   let by: String
