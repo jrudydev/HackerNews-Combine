@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-struct API {
+struct HackerNewsAPI {
   enum Error: LocalizedError {
     case addressUnreachable(URL)
     case invalidResponse
@@ -73,7 +73,7 @@ struct API {
       .dataTaskPublisher(for: EndPoint.stories.url)
       .map(\.data)
       .decode(type: [Int].self, decoder: decoder)
-      .mapError { error -> API.Error in
+      .mapError { error -> HackerNewsAPI.Error in
         switch error {
         case is URLError:
           return Error.addressUnreachable(EndPoint.stories.url)

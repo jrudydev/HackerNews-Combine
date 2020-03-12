@@ -17,7 +17,7 @@ class StoriesViewController: UITableViewController {
   
   @IBOutlet weak var showingLabel: UILabel!
   
-  let newsApi = API()
+  let newsApi = HackerNewsAPI()
   
   var dataSource: UITableViewDiffableDataSource<Section, Story>!
   
@@ -43,7 +43,7 @@ class StoriesViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.configureDatasource()
+    self.configureDataSource()
     
     newsApi.latestStories()
       .receive(on: DispatchQueue.main)
@@ -80,7 +80,7 @@ extension StoriesViewController {
 }
 
 extension StoriesViewController {
-  private func configureDatasource() {
+  private func configureDataSource() {
     self.dataSource = UITableViewDiffableDataSource<Section, Story>(tableView: self.tableView) { tableView, indexPath, story  in
       let cell = tableView.dequeueReusableCell(withIdentifier: "storycell", for: indexPath)
       guard let storyCell = cell as? StoryTableViewCell else { return cell }
