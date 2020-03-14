@@ -95,8 +95,8 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="12 mins ago by Adrian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xu-U7-kKq">
-                                            <rect key="frame" x="50" y="133" width="213" height="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 mins ago by Adrian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xu-U7-kKq">
+                                            <rect key="frame" x="50" y="133" width="314" height="18"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -109,14 +109,14 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="HfB-8z-8KX">
-                                            <rect key="frame" x="50" y="159" width="314" height="30"/>
+                                            <rect key="frame" x="52" y="159" width="312" height="30"/>
                                             <state key="normal" title="https://www.ycombinator.com/companies/nblkjblkjhokjbokjhoj/hoiuhoihoi/dfadfasfasdf/asdfasdfs/sadfsadf"/>
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="HfB-8z-8KX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LNK-So-uuS" secondAttribute="leading" constant="-6" id="3K9-4y-Smt"/>
-                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="7Xu-U7-kKq" secondAttribute="trailing" constant="30" id="AcB-35-6Wb"/>
-                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="HfB-8z-8KX" secondAttribute="trailing" constant="30" id="LXS-Yo-LgI"/>
+                                        <constraint firstItem="HfB-8z-8KX" firstAttribute="leading" secondItem="LNK-So-uuS" secondAttribute="leading" constant="-4" id="3K9-4y-Smt"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="7Xu-U7-kKq" secondAttribute="trailing" constant="30" id="AcB-35-6Wb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="HfB-8z-8KX" secondAttribute="trailing" constant="30" id="LXS-Yo-LgI"/>
                                         <constraint firstItem="7Xu-U7-kKq" firstAttribute="leading" secondItem="k1q-F0-Tfr" secondAttribute="leading" id="Qse-td-Pi7"/>
                                         <constraint firstItem="7Xu-U7-kKq" firstAttribute="top" secondItem="p1r-fK-4nM" secondAttribute="bottom" constant="8" id="exc-pC-nNv"/>
                                         <constraint firstItem="k1q-F0-Tfr" firstAttribute="top" secondItem="xD7-hA-cyz" secondAttribute="top" constant="25" id="fEM-CG-Ycg"/>
