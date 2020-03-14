@@ -17,11 +17,9 @@ class StoriesViewController: UITableViewController {
   
   @IBOutlet weak var showingLabel: UILabel!
   
-  let newsApi = HackerNewsAPI()
-  
   var dataSource: UITableViewDiffableDataSource<Section, Story>!
   
-  var subscriptions = Set<AnyCancellable>()
+  private var viewModel = StoriesViewModel()
   
   private(set) var newsStories = [Story]() {
     didSet {
@@ -45,12 +43,9 @@ class StoriesViewController: UITableViewController {
     
     self.configureDataSource()
     
-    newsApi.latestStories()
-      .receive(on: DispatchQueue.main)
-      .sink(receiveCompletion: { print($0) }, receiveValue: {
-        self.newsStories = $0
-      })
-      .store(in: &subscriptions)
+    self.viewModel.fetchStories() { stories in
+      self.newsStories = stories
+    }
   }
 }
 

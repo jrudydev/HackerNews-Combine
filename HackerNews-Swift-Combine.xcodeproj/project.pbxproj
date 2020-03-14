@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		934CADFB241CB116003E8273 /* StoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934CADFA241CB116003E8273 /* StoriesViewModel.swift */; };
 		934F864D240FAD75000C6385 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934F864C240FAD75000C6385 /* StoryTableViewCell.swift */; };
 		93551F7824072C300001A0FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93551F7724072C300001A0FF /* AppDelegate.swift */; };
 		93551F7A24072C300001A0FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93551F7924072C300001A0FF /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		934CADFA241CB116003E8273 /* StoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewModel.swift; sourceTree = "<group>"; };
 		934F864C240FAD75000C6385 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
 		93551F7424072C300001A0FF /* HackerNews-Swift-Combine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HackerNews-Swift-Combine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93551F7724072C300001A0FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				93551F902407311E0001A0FF /* Story.swift */,
+				934CADFA241CB116003E8273 /* StoriesViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				93551F7C24072C300001A0FF /* StoriesViewController.swift in Sources */,
 				93551F7824072C300001A0FF /* AppDelegate.swift in Sources */,
 				93551F7A24072C300001A0FF /* SceneDelegate.swift in Sources */,
+				934CADFB241CB116003E8273 /* StoriesViewModel.swift in Sources */,
 				93551F8E24072E2E0001A0FF /* HackerNewsAPI.swift in Sources */,
 				93551F912407311E0001A0FF /* Story.swift in Sources */,
 				934F864D240FAD75000C6385 /* StoryTableViewCell.swift in Sources */,
